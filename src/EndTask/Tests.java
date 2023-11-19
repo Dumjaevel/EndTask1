@@ -4,7 +4,11 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+
+
 public class Tests {
+
+
     @Test
     public void testStop() {
         CharBackground Bground = new CharBackground();
@@ -21,7 +25,7 @@ public class Tests {
         Bground.readInput("Rad nummer tre");
         Bground.readInput("stop");
 
-        assertEquals(3, Bground.getRowsNumber);
+        assertEquals(3, Bground.getRows());
     }
     @Test
     public void testNoInput() {
@@ -30,7 +34,7 @@ public class Tests {
 
     Bground.readInput(noInput);
     assertEquals(0, Bground.getRows());
-    assertEquals(0, Bground.getLetters);
+    assertEquals(0, Bground.getLetters());
     }
 
 

@@ -1,27 +1,31 @@
 package EndTask;
+
 public class CharBackground {
 
-    public int getRowsNumber;
-    public int getLetters;
-
-    private int rows;
-    private int letters;
+    private int Rows;
+    private int Letters;
     public CharBackground() {
-        this.rows = 0;
-        this.letters = 0;
+        this.Rows = 0;
+        this.Letters = 0;
     }
 
     public void readInput(String input) {
 
         if(!input.isEmpty() && !input.equalsIgnoreCase("stop")) {
-            rows++;
+            Rows++;
             input = input.replaceAll("[^a-zA-Z]", "");
-            letters += input.length();
+            Letters += input.length();
         }
     }
     public String readResults(){
-        String result = "Your text contains " +rows+ " rows and " +letters+ " letters.";
+        String result = "Your text contains " +Rows+ " rows and " +Letters+ " letters.";
         return result;
     }
+    public int getRows() {
+            return Rows;
+    }
 
+    public int getLetters() {
+        return Letters;
+    }
 }
